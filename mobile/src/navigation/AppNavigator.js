@@ -4,6 +4,7 @@ import * as Device from 'expo-device';
 import LoginScreen from '../screens/LoginScreen';
 import ExamListScreen from '../screens/ExamListScreen';
 import ExamTakerScreen from '../screens/ExamTakerScreen';
+import ExamReportScreen from '../screens/ExamReportScreen';
 import FormBuilder from '../components/FormBuilder';
 
 const Stack = createStackNavigator();
@@ -56,6 +57,14 @@ export default function AppNavigator() {
         component={FormBuilder}
         options={{
           title: 'Yeni Sınav',
+          headerBackTitle: 'Geri'
+        }}
+      />
+      <Stack.Screen 
+        name="ExamReport" 
+        component={ExamReportScreen}
+        options={{
+          title: 'Sınav Raporu',
           headerBackTitle: 'Geri'
         }}
       />
